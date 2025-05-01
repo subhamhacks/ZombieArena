@@ -11,11 +11,30 @@ class Player
 		
 		Vector2f m_Resolution;
 		
+		//for Movement
+		bool m_up;
+		bool m_down;
+		bool m_left;
+		bool m_right;
+		
+		float m_speed=200;//px per sec
+		
 	public:
 		Player(); //constructor
 		
 		void spawn(Vector2f resolution); //spawn player in center of screen
 		
 		Sprite getSprite(); //Return sprite to draw
+		
+		//for movement
+		void moveRight();
+		void moveLeft();
+		void moveUp();
+		void moveDown();
+		void stopRight();
+		void stopLeft();
+		void stopUp();
+		void stopDown();
+		void Update(float elapsedTime);
 			
 };
