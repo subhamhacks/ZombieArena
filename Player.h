@@ -35,6 +35,5 @@ class Player
 		void stopLeft();
 		void stopUp();
 		void stopDown();
-		void Update(float elapsedTime);
-			
+		void Update(float elapsedTime, Vector2i mousePosition);
 };
